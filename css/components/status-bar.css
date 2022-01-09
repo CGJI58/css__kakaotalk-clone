@@ -1,4 +1,10 @@
 .status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  background-color: var(--ui-color);
   display: flex;
   justify-content: center;
   padding: 5px 3px;

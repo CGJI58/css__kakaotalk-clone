@@ -1,5 +1,5 @@
 .screen-header {
-  position: fixed;
+  position: sticky;
   top: 30px;
   display: flex;
   justify-content: space-between;
@@ -8,12 +8,12 @@
   align-items: center;
   box-sizing: border-box;
   background-color: var(--ui-color);
+  padding: var(--horizontal-space);
 }
 
 .screen-header__title {
   font-size: 32px;
   font-weight: 600;
-  padding-left: 10px;
 }
 
 .screen-header__icons span {

@@ -14,30 +14,11 @@
 
 .nav__link {
   position: relative;
-  color: var(--icon-color);
+  color: var(--contents-color);
 }
 
 .nav__notification {
-  background-color: tomato;
-  border-radius: 50%;
   position: absolute;
-}
-
-.nav__notification--large {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 600;
-  width: 30px;
-  height: 30px;
   right: -15px;
   top: -20px;
-}
-
-.nav__notification--small {
-  width: 10px;
-  height: 10px;
-  right: -10px;
-  top: -15px;
 }

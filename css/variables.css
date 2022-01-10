@@ -1,5 +1,6 @@
 :root {
   --yellow: #fae100;
   --ui-color: #f9f9fa;
-  --icon-color: #2e363e;
+  --contents-color: #2e363e;
+  --horizontal-space: 25px;
 }

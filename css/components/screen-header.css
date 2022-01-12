@@ -9,11 +9,16 @@
   box-sizing: border-box;
   background-color: var(--ui-color);
   padding: var(--horizontal-space);
+  border-bottom: var(--ui-border);
 }
 
 .screen-header__title {
   font-size: 32px;
   font-weight: 600;
+}
+
+.screen-header__icons {
+  position: relative;
 }
 
 .screen-header__icons span {

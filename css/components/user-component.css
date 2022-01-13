@@ -41,7 +41,6 @@
   font-weight: 400;
 }
 .user-component__subtitle {
-  margin-top: 8px;
   color: var(--contents-color-pale);
 }
 
@@ -49,4 +48,14 @@
   display: block;
   color: var(--contents-color-pale);
   margin-bottom: 10px;
+}
+
+.user-component__text div {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.user-component__text > div > h6:last-child {
+  margin-left: 3px;
 }

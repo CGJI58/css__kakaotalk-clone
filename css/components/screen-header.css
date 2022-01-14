@@ -4,9 +4,9 @@
   top: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 60px;
-  align-items: center;
   box-sizing: border-box;
   background-color: var(--ui-color);
   padding: var(--horizontal-space);

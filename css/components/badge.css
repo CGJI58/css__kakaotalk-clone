@@ -1,3 +1,15 @@
+@keyframes badgeAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .badge {
   background-color: tomato;
   border-radius: 50%;
@@ -10,13 +22,30 @@
   height: 30px;
   right: -15px;
   top: -20px;
+  animation: badgeAnimation 2s ease-in-out infinite;
+}
+
+@keyframes badge--dotAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: none;
+  }
 }
 
 .badge--dot {
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
   width: 10px;
   height: 10px;
   right: -15px;
-  top: -15px;
+  top: -10px;
+  animation: badge--dotAnimation 2s ease-in-out infinite;
 }
 
 .badge--warning-mark {

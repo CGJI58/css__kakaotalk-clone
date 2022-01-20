@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 1000vh;
+  height: 500vh;
 }
 
 #chat-screen .alt-header {
@@ -13,6 +13,17 @@
   align-items: center;
 }
 
+@keyframes fadeInFromTop {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .chat__timestamp {
   color: white;
   background-color: #92a4b2;
@@ -20,16 +31,43 @@
   font-size: 14px;
   border-radius: 25px;
   margin-bottom: 25px;
+  animation: fadeInFromTop 0.3s linear forwards;
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .message-row {
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+  animation: fadeInFromLeft 0.3s linear forwards;
+}
+
+@keyframes fadeInFromRight {
+  from {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .message-row--own {
+  width: 100%;
   justify-content: flex-end;
+  margin-bottom: 25px;
+  animation: fadeInFromRight 0.3s linear forwards;
 }
 
 .message-row img {
@@ -78,12 +116,14 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 50px;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
 }
 .reply .reply__column:first-child {
   width: 10%;
@@ -107,6 +147,7 @@
   border: var(--ui-border);
   border-radius: 20px;
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -127,9 +168,22 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply input:focus {
+  transform: translateX(-10vw) translateY(-80px);
+}
+
+.reply:focus-within button {
+  transform: translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }

@@ -1,0 +1,22 @@
+{
+  "name": "htmlcss__kakaotalk-clone",
+  "version": "1.0.0",
+  "description": "HTML and CSS are so much fun!",
+  "main": "index.js",
+  "repository": "https://github.com/CGJI58/kakaotalk-clone",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/register": "^7.23.7",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-webserver": "^0.9.1"
+  }
+}

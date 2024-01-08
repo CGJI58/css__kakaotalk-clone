@@ -1,5 +1,5 @@
 import gulp from "gulp";
-// import del from "del";
+import { deleteAsync } from "del";
 import ws from "gulp-webserver";
 
 const routes = {
@@ -11,15 +11,15 @@ const routes = {
 
 const html = () => gulp.src(routes.html.src).pipe(gulp.dest(routes.html.dest));
 
-// const clean = () => del(["build/"]);
+const clean = async () => await deleteAsync(["build/"]);
 
 const webserver = () =>
   gulp.src("build").pipe(ws({ livereload: true, open: true }));
 
-// const prepare = gulp.series([clean]);
+const prepare = gulp.series([clean]);
 
 const assets = gulp.series([html]);
 
 const postDev = gulp.series([webserver]);
 
-export const dev = gulp.series([assets, postDev]);
+export const dev = gulp.series([prepare, assets, postDev]);

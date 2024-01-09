@@ -2,28 +2,28 @@
 @import "variables.css";
 
 /* Components */
-@import "components/status-bar.css";
-@import "components/nav-bar.css";
-@import "components/screen-header.css";
-@import "components/user-component.css";
-@import "components/badge.css";
-@import "components/icon-row.css";
-@import "components/alt-screen-header.css";
-@import "components/no-mobile.css";
+@import "status-bar.css";
+@import "nav-bar.css";
+@import "screen-header.css";
+@import "user-component.css";
+@import "badge.css";
+@import "icon-row.css";
+@import "alt-screen-header.css";
+@import "no-mobile.css";
 
 /* Screens */
-@import "screens/login.css";
-@import "screens/friends.css";
-@import "screens/find.css";
-@import "screens/more.css";
-@import "screens/settings.css";
-@import "screens/chat.css";
+@import "login.css";
+@import "friends.css";
+@import "find.css";
+@import "more.css";
+@import "settings.css";
+@import "chat.css";
 
 body {
   background-color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 1000vh;
+  height: 200vh;
   color: var(--contents-color-main);
 }
 

@@ -1,11 +1,16 @@
 import gulp from "gulp";
 import { deleteAsync } from "del";
 import ws from "gulp-webserver";
+import gimage from "gulp-imagemin";
 
 const routes = {
   html: {
     src: "./src/*.html",
     dest: "build",
+  },
+  img: {
+    src: "./src/imgs/*",
+    dest: "build/imgs",
   },
   css: {
     base: "./src/css/*.css",
@@ -22,6 +27,9 @@ const clean = async () => await deleteAsync(["build/"]);
 const webserver = () =>
   gulp.src("build").pipe(ws({ livereload: true, open: true }));
 
+const img = () =>
+  gulp.src(routes.img.src).pipe(gimage()).pipe(gulp.dest(routes.img.dest));
+
 const styles = () =>
   gulp
     .src(routes.css.base)
@@ -29,7 +37,7 @@ const styles = () =>
     .pipe(gulp.src(routes.css.screens))
     .pipe(gulp.dest(routes.css.dest));
 
-const prepare = gulp.series([clean]);
+const prepare = gulp.series([clean, img]);
 
 const assets = gulp.series([html, styles]);
 
